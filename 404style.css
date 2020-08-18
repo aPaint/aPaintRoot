@@ -1,0 +1,97 @@
+:root{
+    --skyBlue: #9edaf0;
+    --darkGray: #6c6767;
+    --lightGray: #d7d7d7;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    outline: none;
+    border:none;
+
+    font-family: 'Work Sans', sans-serif;
+    font-weight: normal;
+
+
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}
+
+a{
+    text-decoration:none;
+}
+
+body{
+    height: 100vh;
+}
+
+.content{
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-rows: 3.5fr 6.5fr;
+    
+}
+
+
+.paintdrip{
+    
+    height: 100%;
+    width: 100%;
+    background-image: url('./src/img/paintdrip.png');
+    background-size: 80% auto;
+    background-repeat: repeat-x;
+
+    display: grid;
+    
+
+}
+
+.paintdrip > div{
+    justify-self: center;
+    align-self: center;
+
+    display: grid;
+    margin-top:10%;
+}
+
+.paintdrip div > p{
+    font-size: 2.0em;
+    color: var(--darkGray);
+}
+
+.paintdrip div > div{
+    text-align: center;
+    height: 150px;
+    display: grid;
+}
+
+.paintdrip div > div > a{
+    justify-self: center;
+    align-self: center;
+    color: white;
+    padding: 20px;
+    background: var(--skyBlue);
+    border-radius: 20px 20px 20px 20px;
+}
+
+.paintdrip div > div > a:hover{
+    background: var(--darkGray);
+}
+
+.logosect{
+    display: grid;
+}
+
+.logosect img{
+    height: 70%;
+    width: auto;
+    justify-self: center;
+    align-self: center;
+} 
