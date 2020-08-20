@@ -95,3 +95,10 @@ body{
     justify-self: center;
     align-self: center;
 } 
+
+@media(max-width:500){
+    .logosect img{
+        height: auto;
+        width: 90%;
+    }
+}
