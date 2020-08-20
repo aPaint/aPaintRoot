@@ -713,4 +713,35 @@ body{
     .step p{
         font-size: 0.88em;
     }
+    
+    .landingWrap{
+        height: max-content;
+    }
+
+    .landingSection{
+        height: 570px;
+    }
+
+    .lsOverlay{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+
+    .logoCont img{
+        margin-left: 0;
+    }
+
+    .logoCont{
+        align-self: start;
+    }
+
+    .downloadCont{
+        grid-column:initial;
+        width:max-content;
+        justify-self: center;
+    }
+
+    .paintdrip{
+        z-index: 2;
+    }
 }
