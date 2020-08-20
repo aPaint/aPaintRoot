@@ -5,3 +5,9 @@ dButton.addEventListener('mousedown',()=>{
         behavior:'smooth'
     })
 })
+
+dButton.addEventListener('mouseup',()=>{
+    document.getElementById('dsect').scrollIntoView({
+        behavior:'smooth'
+    })
+})
