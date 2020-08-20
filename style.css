@@ -716,6 +716,7 @@ body{
     
     .landingWrap{
         height: max-content;
+        background:none;
     }
 
     .landingSection{
@@ -725,6 +726,7 @@ body{
     .lsOverlay{
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 1fr;
+        height: 400px;
     }
 
     .logoCont img{
