@@ -1,3 +1,8 @@
+
+#dripmobile{
+    display: none;
+}
+
 :root{
     --skyBlue: #9edaf0;
     --darkGray: #6c6767;
@@ -713,9 +718,6 @@ body{
     }
 }
 
-#dripmobile{
-    display: none;
-}
 
 @media(max-width:490px){
 
