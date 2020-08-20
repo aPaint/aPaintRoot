@@ -1,3 +1,8 @@
-Download Count :
+Get Count :
 
-https://api.countapi.xyz/get/apaint.io/530bf04d-c821-46b9-9810-897f35b19984?
+https://api.countapi.xyz/get/apaint.io/530bf04d-c821-46b9-9810-897f35b19984
+
+
+Count Reset :
+
+https://api.countapi.xyz/set/apaint.io/530bf04d-c821-46b9-9810-897f35b19984?value=0
