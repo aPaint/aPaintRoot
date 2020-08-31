@@ -19,6 +19,20 @@
     padding: 20px 0 20px 0;
 }
 
+.BHCont div{
+    height: max-content;
+    align-self: center;
+    color: white;
+    font-size: 1.8em;
+}
+
+.mainHead{
+    padding:15px;
+    background-color: white;
+    border-radius: 25px;
+    color: var(--skyBlue)
+}
+
 .BHanimation {
 
     height: 100% !important;
@@ -38,15 +52,6 @@
     background-repeat: repeat-x;
 }
 
-@media (max-width: 925px){
-    .BHpaintdrip {
-        background-size: 80% auto;
-    }
-
-    .fadeIn{
-        animation: initial;
-    }
-}
 
 @media (max-width: 500px){
     .BHpaintdrip {
@@ -73,5 +78,78 @@
 .BHwrap{
     background: var(--skyBlue);
     display: grid;
-    grid-template-columns: minmax(2%,1fr) minmax(890px,1100px) minmax(2%,1fr);
+    grid-template-columns: minmax(2%,1fr) 920px minmax(2%,1fr);
+}
+
+.BHsmallText{
+    display: none;
+}
+
+@media (max-width: 1010px){
+
+    .BHpaintdrip {
+        background-size: 80% auto;
+    }
+
+    .fadeIn{
+        animation: initial;
+    }
+    
+    .headDesc{
+        display: none;
+    }
+
+    .BHCont {
+        height: 180px;
+        grid-template-columns: 1fr 2fr;
+        width: 400px;
+        justify-self: center;
+        grid-template-rows: 3fr 1fr;
+    }
+
+    .BHCont div{
+        width: max-content;
+        justify-self: center;
+    }
+
+    .BHwrap{
+        grid-template-columns: 1fr;
+        width: 100%;
+    }
+
+    .BHanimation {
+        height: auto !important;
+        width: 100% !important;
+    }
+
+    .BHsmallText{
+        display: initial;
+        grid-column: 1/3;
+        width: max-content;
+        height: max-content;
+        justify-self: center;
+        color: white;
+        font-size: 1.2em;
+    }
+}
+
+@media(max-width:420px){
+    .BHanimation{
+        display: none;
+    }
+
+    .BHCont div{
+        width: max-content;
+        justify-self: center;
+        grid-column: 1/3;
+    }
+
+    .BHCont {
+        width: 90%;
+    }
+
+    .BHsmallText{
+        width: 80%;
+        text-align: center;
+    }
 }
