@@ -2,12 +2,17 @@
     --skyBlue: #9edaf0;
     --darkGray: #6c6767;
     --lightGray: #d7d7d7;
+
+    --blueGray: #809BCE;
+    --blueGreen: #b8e0d2;
+    --queenPink: #EAC4D5;
 }
 
 
 
 .blogHeader{
     height: max-content;
+    min-height: 270px;
 }
 
 .BHCont{
@@ -153,3 +158,365 @@
         text-align: center;
     }
 }
+
+
+/* blog sliders section */
+
+.blogCont{
+    height: 420px;
+    width: 100%;
+    background:white;
+    position: relative;
+
+    display: grid;
+}
+
+
+
+.mblogButtons{
+    height: 50px;
+    width: 50px;
+    align-self: center;
+    font-size: 2em;
+    display: grid;
+    background: transparent;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top:50%;
+}
+
+.mblogButtons > i{
+    justify-self: center;
+    align-self: center;
+    color: var(--lightGray);
+}
+
+.mblogButtons i:hover{
+    color:var(--blueGray);
+
+}
+
+.wblogButtons{
+    height: 50px;
+    width: 50px;
+    align-self: center;
+    font-size: 2em;
+    display: grid;
+    background: transparent;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top:50%;
+}
+
+.wblogButtons > i{
+    justify-self: center;
+    align-self: center;
+    color: var(--lightGray);
+}
+
+.wblogButtons i:hover{
+    color:var(--queenPink);
+
+}
+
+
+.blogLeft{
+    left: 5%;
+}
+
+.blogRight{
+    left: 95%;
+}
+
+.blogArticles{
+    position: relative;
+    width: 1000px;
+    height: 100%;
+    justify-self: center;
+}
+
+.sideFeature{
+    position: absolute;
+    height: 300px;
+    width: 225px;
+    background: var(--lightGray);
+    transform: translate(-50%,-50%);
+
+    border-radius: 25px;
+
+    display: grid;
+}
+
+.LsideFeature{
+    top:50%;
+    left:20%;
+}
+
+.RsideFeature{
+    top:50%;
+    left:80%;
+}
+
+
+
+.mainFeature{
+    position: absolute;
+    height: 400px;
+    width: 300px;
+
+    transform: translate(-50%,-50%);
+
+    top:50%;
+    left: 50%;
+
+    border-radius: 33px;
+
+    display: grid;
+}
+
+
+.right2center{
+    animation-name: right2center;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+    animation-duration: 0.4s;
+    animation-timing-function: ease-in-out;
+}
+
+.center2right{
+    animation-name: right2center;
+    animation-direction: reverse;
+    animation-fill-mode: forwards;
+    animation-duration: 0.4s;
+    animation-timing-function: ease-in-out;
+}
+
+.left2center{
+    animation-name: left2center;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+    animation-duration: 0.4s;
+    animation-timing-function: ease-in-out;
+}
+
+.center2left{
+    animation-name: left2center;
+    animation-direction: reverse;
+    animation-fill-mode: forwards;
+    animation-duration: 0.4s;
+    animation-timing-function: ease-in-out;
+}
+
+.rightOut{
+    animation-name: rightOut;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+    animation-duration: 0.4s;
+    animation-timing-function: ease-in-out;
+}
+
+.rightIn{
+    animation-name: rightOut;
+    animation-direction: reverse;
+    animation-fill-mode: forwards;
+    animation-duration: 0.4s;
+    animation-timing-function: ease-in-out;
+}
+
+.leftOut{
+    animation-name: leftOut;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+    animation-duration: 0.4s;
+    animation-timing-function: ease-in-out;
+}
+
+.leftIn{
+    animation-name: leftOut;
+    animation-direction: reverse;
+    animation-fill-mode: forwards;
+    animation-duration: 0.4s;
+    animation-timing-function: ease-in-out;
+}
+
+.hFeat{
+    height: 0px;
+    width: 0px;
+}
+
+@keyframes right2center{
+    0%{
+        z-index:9;
+        top:50%;
+        left:80%;
+
+        height: 300px;
+        width: 225px;
+
+        border-radius: 25px;
+    }
+
+
+    100%{
+        z-index:9;
+        top:50%;
+        left: 50%;
+
+        height: 400px;
+        width: 300px;
+
+        border-radius: 33px;
+    }
+}
+
+@keyframes leftOut{
+    0%{
+        opacity: 1;
+
+        top:50%;
+        left:20%;
+
+        height: 300px;
+        width: 225px;
+
+        border-radius: 25px;
+
+        display: absolute;
+    }
+
+
+    98%{
+        display: absolute;
+    }
+
+    99%{
+        opacity: 0;
+        display: none;
+
+    }
+
+    100%{
+        opacity: 0;
+        display: none;
+
+        top:50%;
+        left:10%;
+
+        height: 200px;
+        width: 150px;
+
+        border-radius: 18px;
+    }
+}
+
+@keyframes left2center{
+    0%{
+        z-index:9;
+        top:50%;
+        left:20%;
+
+        height: 300px;
+        width: 225px;
+
+        border-radius: 25px;
+
+    }
+
+
+    100%{
+        z-index:9;
+        top:50%;
+        left: 50%;
+
+        height: 400px;
+        width: 300px;
+
+        border-radius: 33px;
+
+
+    }
+}
+
+@keyframes rightOut{
+    0%{
+        opacity: 1;
+
+        top:50%;
+        left:80%;
+
+        height: 300px;
+        width: 225px;
+
+        border-radius: 25px;
+
+        display: absolute;
+    }
+
+    98%{
+        display: absolute;
+    }
+
+    99%{
+        opacity: 0;
+        display: none;
+
+    }
+
+    100%{
+        opacity: 0;
+        display: none;
+
+        top:50%;
+        left: 90%;
+
+        height: 200px;
+        width: 150px;
+
+        border-radius: 18px;
+    }
+}
+
+
+
+.mfeatureColor{
+    background: var(--blueGray);
+
+    
+}
+
+.wfeatureColor{
+    background: var(--queenPink);
+}
+
+
+/* blog items */
+
+.hFeat > div > a.mitemTitle{
+    display: none;
+}
+
+.mainFeature > div > a.mitemTitle{
+    font-size: 1.3em;
+    color: white;
+}
+
+.mitem{
+    width: 90%;
+    height: 90%;
+    justify-self: center;
+    align-self: center;
+    display: grid;
+    grid-template-rows: 3fr 1fr;
+}
+
+.mitemTitle{
+    height: max-content;
+    width: 80%;
+    text-align: center;
+    justify-self: center;
+    align-self: center;
+    color: var(--darkGray);
+
+}
+
+
