@@ -53,17 +53,19 @@
        
     </div>
 
-
+    <div class="blogSectionHeader">
+        <div style="border-color:#809BCE"><p style="color:#809BCE">Machine Learning</p></div>
+    </div>
 
     <div class="blogCont">
 
     
-        <div class="blogArticles">
+        <div class="blogArticles" onclick="addClicking(event.target,['m',9])">
 
-            <button class="mblogLeft blogLeft mblogButtons" onclick="shiftL('m')">
+            <button class="mblogLeft blogLeft mblogButtons" onclick="shiftL('m',9)">
                 <i class="fas fa-angle-left"></i>
             </button>
-            <button class="mblogRight blogRight mblogButtons" onclick="shiftR('m')">
+            <button class="mblogRight blogRight mblogButtons" onclick="shiftR('m',9)">
                     <i class="fas fa-angle-right"></i>
             </button>
 
@@ -87,6 +89,7 @@
                 <div class="mitem">
                     <div class="mitemImg"></div>
                     <a href="./blog/ML/Vertical_Stacking/read.html" class="mitemTitle">How does Vertical Stacking Work?</a>
+                    <p class="mitemDate">02/09/2020</p>
                 </div>
 
             </div>
@@ -102,15 +105,25 @@
 
 
 
-    <div class="blogCont">
+    <div class="wBHpaintdrip">
+        <img id="wBHdripmobile" src="src/img/whitepaintdrip.png">
+
+    </div>
+
+    <div class="blogSectionHeader"  style="background:#6c6767;"">
+        <div style="background:#6c6767;border-color:#EAC4D5"><p style="color:#EAC4D5">Web Development</p></div>
+    </div>
+
+
+    <div class="blogCont" style="background: #6c6767">
 
     
-        <div class="blogArticles">
+        <div class="blogArticles" onclick="addClicking(event.target,['w',9])">
 
-            <button class="wblogLeft blogLeft wblogButtons" onclick="shiftL('w')">
+            <button class="wblogLeft blogLeft wblogButtons" onclick="shiftL('w',9)">
                 <i class="fas fa-angle-left"></i>
             </button>
-            <button class="wblogRight blogRight wblogButtons" onclick="shiftR('w')">
+            <button class="wblogRight blogRight wblogButtons" onclick="shiftR('w',9)">
                     <i class="fas fa-angle-right"></i>
             </button>
 
@@ -134,7 +147,11 @@
             </div>
 
             <div class="wfeatureColor mainFeature wmCurr">
-
+                <div class="witem">
+                    <div class="witemImg"></div>
+                    <a href="./blog/ML/Vertical_Stacking/read.html" class="witemTitle">A Beginner's guide to React</a>
+                    <p class="witemDate">02/09/2020</p>
+                </div>
             </div>
 
         </div>
@@ -142,8 +159,57 @@
     </div>
 
 
+    <div class="gBHpaintdrip">
+        <img id="gBHdripmobile" src="src/img/graypaintdrip.png">
 
+    </div>
 
+    <div class="blogSectionHeader">
+        <div style="border-color:#b8e0d2"><p style="color:#b8e0d2">Others + More Programming!</p></div>
+    </div>
+
+    <div class="blogCont">
+
+    
+        <div class="blogArticles" onclick="addClicking(event.target,['o',3])">
+
+            <button class="oblogLeft blogLeft oblogButtons" onclick="shiftL('o',3)">
+                <i class="fas fa-angle-left"></i>
+            </button>
+            <button class="oblogRight blogRight oblogButtons" onclick="shiftR('o',3)">
+                    <i class="fas fa-angle-right"></i>
+            </button>
+
+<!-- remeber to change blog count... -->
+            <div class="hFeat oF0"></div>
+            <div class="hFeat oF1"></div>
+            <div class="hFeat oF2"></div>
+            <div class="hFeat oF3"></div>
+            <div class="hFeat oF4"></div>
+            <div class="hFeat oF5">
+
+            </div>
+
+            <!-- randomize side features...-->
+            <div class="LsideFeature sideFeature olCurr">
+
+            </div>
+            
+            <div class="RsideFeature sideFeature orCurr">
+
+            </div>
+
+            <div class="ofeatureColor mainFeature omCurr">
+                <div class="oitem">
+                    <div class="oitemImg"></div>
+                    <a href="./blog/ML/Vertical_Stacking/read.html" class="oitemTitle">Resources for Beginner Programmers</a>
+                    <p class="oitemDate">02/09/2020</p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
 
 
 

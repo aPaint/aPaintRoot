@@ -1,5 +1,3 @@
-let blogCount = 9;
-
 function shiftID(id, add, itemCount, letter){
 
     let idArr = id.split('F');
@@ -30,7 +28,7 @@ function shiftID(id, add, itemCount, letter){
 }
 
 
-function shiftR(letter){
+function shiftR(letter, blogCount){
 
     document.getElementsByClassName(letter+'blogRight')[0].disabled=true;
 
@@ -48,37 +46,51 @@ function shiftR(letter){
     for(let i=0; i<hICount; i++){
         var keyID = letter + 'F'+String(i)
 
-        //console.log(keyID)
-        
-        // console.log(keyID)
-
         var hItem = document.getElementsByClassName(keyID)[0];
         hItems.push(hItem);
     }
 
-    for(let j=1; j<hItems.length; j++){
-        var oldID = letter + 'F' + String(j)
+    if(blogCount > 3){
+        for(let j=1; j<hItems.length; j++){
+            var oldID = letter + 'F' + String(j)
+    
+            var newID = shiftID(oldID,false,hICount-1,letter);
+    
+            hItems[j].classList.remove(oldID);
+    
+            hItems[j].classList.add(newID)
+        }
+    
+    }
 
-        var newID = shiftID(oldID,false,hICount-1,letter);
-
-        hItems[j].classList.remove(oldID);
-
-        hItems[j].classList.add(newID)
+    if(blogCount > 3){
+        enter.classList.add('leftIn','LsideFeature','sideFeature');
+        
+        rightF.classList.add('rightOut');
+    }else{
+        rightF.classList.add('rightBlinkLeft','LsideFeature','sideFeature');
     }
 
 
-
-    enter.classList.add('leftIn','LsideFeature','sideFeature');
 
     leftF.classList.add('left2center','mainFeature',letter+'featureColor');
 
     mainF.classList.add('center2right','RsideFeature','sideFeature');
 
-    rightF.classList.add('rightOut');
 
     setTimeout(()=>{
-        enter.classList.remove(letter+'F0','hFeat');
-        enter.classList.add(letter +'lCurr');
+
+        if(blogCount > 3){
+            enter.classList.remove(letter+'F0','hFeat');
+            enter.classList.add(letter +'lCurr');
+
+            rightF.classList.remove(letter +'rCurr','RsideFeature','sideFeature')
+            rightF.classList.add('hFeat',letter+'F'+String(hICount-1))
+        }else{
+            rightF.classList.remove(letter +'rCurr','RsideFeature')
+            rightF.classList.add(letter +'lCurr');
+        }
+
 
         leftF.classList.remove(letter +'lCurr','LsideFeature','sideFeature');
         leftF.classList.add(letter+'mCurr');
@@ -86,15 +98,22 @@ function shiftR(letter){
         mainF.classList.remove(letter +'mCurr',letter+'featureColor','mainFeature');
         mainF.classList.add(letter +'rCurr');
 
-        rightF.classList.remove(letter +'rCurr','RsideFeature','sideFeature')
-        rightF.classList.add('hFeat',letter+'F'+String(hICount-1))
+
     },100)
 
     setTimeout(()=>{
-        enter.classList.remove('leftIn');
+
+        if(blogCount > 3){
+            enter.classList.remove('leftIn');
+            rightF.classList.remove('rightOut')
+        }else{
+            rightF.classList.remove('rightBlinkLeft')
+        }
+
+
         leftF.classList.remove('left2center');
         mainF.classList.remove('center2right');
-        rightF.classList.remove('rightOut')
+
         
         document.getElementsByClassName(letter+'blogRight')[0].disabled=false;
 
@@ -104,7 +123,8 @@ function shiftR(letter){
 
 
 
-function shiftL(letter){
+function shiftL(letter, blogCount){
+
 
     document.getElementsByClassName(letter+'blogLeft')[0].disabled=true;
 
@@ -130,29 +150,48 @@ function shiftL(letter){
         hItems.push(hItem);
     }
 
-    for(let j=0; j<hItems.length-1; j++){
-        var oldID = letter+ 'F' + String(j)
 
-        var newID = shiftID(oldID,true,hICount-1,letter);
-
-        hItems[j].classList.remove(oldID);
-
-        hItems[j].classList.add(newID)
+    if(blogCount > 3){
+        for(let j=0; j<hItems.length-1; j++){
+            var oldID = letter+ 'F' + String(j)
+    
+            var newID = shiftID(oldID,true,hICount-1,letter);
+    
+            hItems[j].classList.remove(oldID);
+    
+            hItems[j].classList.add(newID)
+        }
     }
 
 
+    if(blogCount > 3){
 
-    enter.classList.add('RightIn','RsideFeature','sideFeature');
+        enter.classList.add('RightIn','RsideFeature','sideFeature');
+        leftF.classList.add('leftOut');
+        
+    }else{
+
+        leftF.classList.add('leftBlinkRight','RsideFeature','sideFeature');
+
+    }
 
     rightF.classList.add('right2center','mainFeature',letter+'featureColor');
-
     mainF.classList.add('center2left','LsideFeature','sideFeature');
 
-    leftF.classList.add('leftOut');
+
 
     setTimeout(()=>{
-        enter.classList.remove(letter + 'F'+String(hICount-1),'hFeat');
-        enter.classList.add(letter +'rCurr');
+
+        if(blogCount > 3){
+            enter.classList.remove(letter + 'F'+String(hICount-1),'hFeat');
+            enter.classList.add(letter +'rCurr');
+
+            leftF.classList.remove(letter +'lCurr','LsideFeature','sideFeature')
+            leftF.classList.add('hFeat',letter+'F0')
+        }else{
+            leftF.classList.remove(letter +'lCurr','LsideFeature');
+            leftF.classList.add(letter +'rCurr');
+        }
 
         rightF.classList.remove(letter +'rCurr','RsideFeature','sideFeature');
         rightF.classList.add(letter +'mCurr');
@@ -160,18 +199,52 @@ function shiftL(letter){
         mainF.classList.remove(letter +'mCurr',letter+'featureColor','mainFeature');
         mainF.classList.add(letter +'lCurr');
 
-        leftF.classList.remove(letter +'lCurr','LsideFeature','sideFeature')
-        leftF.classList.add('hFeat',letter+'F0')
+
     },100)
 
     setTimeout(()=>{
-        enter.classList.remove('rightIn');
+
+        if(blogCount > 3){
+            enter.classList.remove('rightIn');
+            leftF.classList.remove('leftOut');
+        }else{
+            leftF.classList.remove('leftBlinkRight');
+        }
+
+
         rightF.classList.remove('right2center');
         mainF.classList.remove('center2left');
-        leftF.classList.remove('leftOut')
+        
         
         document.getElementsByClassName(letter+'blogLeft')[0].disabled=false;
 
     },400)
 
 }
+
+
+function addClicking(e,markers){    
+
+    let el;
+
+    if(e.classList.contains(markers[0]+'itemImg') || e.classList.contains(markers[0]+'itemTitle') || e.classList.contains(markers[0]+'itemDate') ){
+        el = e.parentElement.parentElement;
+    }else if(e.classList.contains(markers[0]+'item')){
+        el = e.parentElement;
+    }else{
+        el = e;
+    }
+
+
+    if(el.classList.contains('LsideFeature')){
+        shiftR(markers[0],markers[1])
+    }else if(el.classList.contains('RsideFeature')){
+        shiftL(markers[0],markers[1])
+    }
+
+
+}
+
+
+
+
