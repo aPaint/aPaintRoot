@@ -978,3 +978,11 @@
         border-radius: 80px;
     }
 }
+
+
+
+/* sideFeature Link Disable */
+
+.sideFeature > div > a{
+    pointer-events: none;
+}
