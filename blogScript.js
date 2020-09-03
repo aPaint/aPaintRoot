@@ -117,7 +117,7 @@ function shiftR(letter, blogCount){
         
         document.getElementsByClassName(letter+'blogRight')[0].disabled=false;
 
-    },400)
+    },500)
 
 }
 
@@ -218,7 +218,7 @@ function shiftL(letter, blogCount){
         
         document.getElementsByClassName(letter+'blogLeft')[0].disabled=false;
 
-    },400)
+    },500)
 
 }
 
