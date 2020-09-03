@@ -166,7 +166,7 @@ function shiftL(letter, blogCount){
 
     if(blogCount > 3){
 
-        enter.classList.add('RightIn','RsideFeature','sideFeature');
+        enter.classList.add('rightIn','RsideFeature','sideFeature');
         leftF.classList.add('leftOut');
         
     }else{
@@ -248,3 +248,48 @@ function addClicking(e,markers){
 
 
 
+
+document.addEventListener('swiped-left', function(e) {
+   
+
+    classList = e.target.classList[0].substring(1);
+    fullClass = e.target.classList[0];
+
+    blogNum = document.getElementsByClassName(e.target.classList[0].charAt(0)+'blogLeft')[0].value;
+
+    if((classList == "itemTitle")||(classList == "itemImg")||(classList == "itemDate")||(classList == "featureColor")){
+
+        console.log(blogNum)
+
+        shiftL(e.target.classList[0].charAt(0),blogNum)
+
+    }else if(fullClass=='mainFeature'){
+        shiftL(e.target.classList[1].charAt(0),blogNum)
+    }
+
+
+
+});
+
+
+document.addEventListener('swiped-right', function(e) {
+   
+
+    classList = e.target.classList[0].substring(1);
+    fullClass = e.target.classList[0];
+
+    blogNum = document.getElementsByClassName(e.target.classList[0].charAt(0)+'blogLeft')[0].value;
+
+    if((classList == "itemTitle")||(classList == "itemImg")||(classList == "itemDate")||(classList == "featureColor")){
+
+        console.log(blogNum)
+
+        shiftR(e.target.classList[0].charAt(0),blogNum)
+
+    }else if(fullClass=='mainFeature'){
+        shiftR(e.target.classList[1].charAt(0),blogNum)
+    }
+
+
+
+});
