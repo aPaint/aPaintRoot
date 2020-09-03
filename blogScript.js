@@ -30,8 +30,10 @@ function shiftID(id, add, itemCount, letter){
 
 function shiftR(letter, blogCount){
 
+    document.getElementsByClassName(letter+'blogLeft')[0].disabled=true;
     document.getElementsByClassName(letter+'blogRight')[0].disabled=true;
 
+    document.getElementsByClassName('blogArticles')[0].classList.add('disablePE');
 
     var enter = document.getElementsByClassName(letter +'F0')[0];
     var leftF = document.getElementsByClassName(letter +'lCurr')[0];
@@ -116,8 +118,13 @@ function shiftR(letter, blogCount){
 
         
         document.getElementsByClassName(letter+'blogRight')[0].disabled=false;
+        document.getElementsByClassName(letter+'blogLeft')[0].disabled=false;
 
     },500)
+
+    setTimeout(()=>{
+        document.getElementsByClassName('blogArticles')[0].classList.remove('disablePE');
+    },600)
 
 }
 
@@ -127,6 +134,9 @@ function shiftL(letter, blogCount){
 
 
     document.getElementsByClassName(letter+'blogLeft')[0].disabled=true;
+    document.getElementsByClassName(letter+'blogRight')[0].disabled=true;
+
+    document.getElementsByClassName('blogArticles')[0].classList.add('disablePE');
 
     var hICount = blogCount - 3;
 
@@ -217,8 +227,14 @@ function shiftL(letter, blogCount){
         
         
         document.getElementsByClassName(letter+'blogLeft')[0].disabled=false;
+        document.getElementsByClassName(letter+'blogRight')[0].disabled=false;
+
 
     },500)
+
+    setTimeout(()=>{
+        document.getElementsByClassName('blogArticles')[0].classList.remove('disablePE');
+    },600)
 
 }
 

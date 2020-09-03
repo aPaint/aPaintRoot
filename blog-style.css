@@ -824,6 +824,10 @@
     animation-timing-function: ease-in-out;
 }
 
+.disablePE{
+    pointer-events: none;
+}
+
 
 /* blog header */
 
