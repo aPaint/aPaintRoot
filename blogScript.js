@@ -124,7 +124,7 @@ function shiftR(letter, blogCount){
 
     setTimeout(()=>{
         document.getElementsByClassName('blogArticles')[0].classList.remove('disablePE');
-    },600)
+    },520)
 
 }
 
@@ -234,7 +234,7 @@ function shiftL(letter, blogCount){
 
     setTimeout(()=>{
         document.getElementsByClassName('blogArticles')[0].classList.remove('disablePE');
-    },600)
+    },520)
 
 }
 
